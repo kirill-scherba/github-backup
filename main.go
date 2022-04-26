@@ -41,7 +41,10 @@ func main() {
 
 	// Parse users and limit
 	users := strings.Split(userslist, ",")
-	limit := strings.Split(limitslist, ",")
+	limit := make([]string, 0)
+	if len(strings.TrimSpace(limitslist)) != 0 {
+		limit = strings.Split(limitslist, ",")
+	}
 
 	// Get list of repos with gh cli application
 	for _, user := range users {
