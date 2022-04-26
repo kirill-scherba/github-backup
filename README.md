@@ -11,6 +11,9 @@ Application parameters:
     -users  <[user-or-organisation-comma-separated-list]>
     -limit  [user-repo-comma-separated-list]
     -output [local-folder-name], default: ./repos
+    -starsonly
+    -stars  
+
 
 Usage examples:
 
