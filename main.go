@@ -33,10 +33,13 @@ func main() {
 
 	// Parse parameters
 	var userslist, limitslist, output, maxrepo string
+	var stars, starsonly bool
 	flag.StringVar(&userslist, "users", "", "user or organisation comma separated list")
 	flag.StringVar(&limitslist, "limit", "", "user/repository comma separated list to backup, all if empty")
 	flag.StringVar(&output, "output", "repos", "local folder name to save repositories")
 	flag.StringVar(&maxrepo, "maxrepo", "1000", "maximum number of users repositories to be cloned")
+	flag.BoolVar(&stars, "maxrepo", false, "backup starred repositories also")
+	flag.BoolVar(&starsonly, "maxrepo", false, "backup starred repositories only")
 	flag.Parse()
 
 	// Parse users and limit
